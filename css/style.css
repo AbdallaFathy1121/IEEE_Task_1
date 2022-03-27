@@ -1,0 +1,263 @@
+/* Start Global */
+
+:root {
+    --white: #FFFFFF;
+    --white2: #F6F7FB;
+    --black: #000000;
+    --blue: #00287A;
+    --blue2: #093181;
+}
+
+body {
+    color: var(--black);
+    background: var(--white2);
+    font-family: 'Segoe UI';
+    height: 10000px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+li {
+    list-style: none;
+}
+
+/* End Global */
+/* ******************************** */
+/* Start Navbar */
+
+.nav-bar {
+    position: relative;
+    background-color: var(--blue);
+    color: var(--white);
+    width: 100%;
+    transition: .4s all;
+    transition: all .5s ease;
+    transform-origin: top;
+}
+
+.animate {
+    -webkit-transform: perspective(400px) rotateX(-90deg);
+    transform: perspective(400px) rotateX(-90deg);
+}
+
+.active-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-bar .navbar-brand {
+    padding: 0 !important;
+}
+
+.nav-bar .navbar-brand img {
+    max-height: 80px;
+}
+
+.nav-bar a {
+    font-size: 18px;
+    font-weight: normal;
+    color: var(--white) !important;
+    padding: 26.5px 8px !important;
+    margin: 0 15px;
+    text-align: center;
+}
+@media (max-width: 992px) {
+    .nav-bar a {
+        font-size: 16px;
+        padding: 13px 8px !important;
+        margin: 0;
+    }
+}
+
+.nav-bar .active {
+    position: relative;
+}
+
+.nav-bar .active a {
+    position: relative;
+    font-weight: bold;
+}
+.nav-bar .active a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 4px;
+    background-color: var(--white);
+}
+@media (max-width: 992px) {
+    .nav-bar .active a:after {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+/* End Navbar */
+/* ******************************** */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ******************************************** */
+/* Start Loading */
+
+.box-loading {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white2);
+    z-index: 99999999999;
+}
+
+.loader {
+    position: absolute;
+    top: calc(50% - 32px);
+    left: calc(50% - 32px);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    perspective: 800px;
+  }
+  
+  .inner {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+  }
+  
+  .inner.one {
+    left: 0%;
+    top: 0%;
+    animation: rotate-one 1s linear infinite;
+    border-bottom: 3px solid var(--blue);
+  }
+  
+  .inner.two {
+    right: 0%;
+    top: 0%;
+    animation: rotate-two 1s linear infinite;
+    border-right: 3px solid var(--blue);
+  }
+  
+  .inner.three {
+    right: 0%;
+    bottom: 0%;
+    animation: rotate-three 1s linear infinite;
+    border-top: 3px solid var(--blue);
+  }
+  
+  @keyframes rotate-one {
+    0% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotate-two {
+    0% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotate-three {
+    0% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+}
+
+/* End Loading */
+/* ******************************************************** */
+/* Start ScrollTop */
+
+.scroll {
+    position: fixed;
+    right: 2%;
+    bottom: 3%;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: var(--white);
+    background: var(--blue);
+    z-index: 99;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    box-shadow:  0 0 2px 2px transparent;
+    opacity: 0;
+}
+.scroll:hover {
+    background-color: var(--blue2);
+    border: none;
+}
+
+@media (max-width: 576px) {
+    .scroll {
+        font-size: 16px;
+        padding: 8px;
+        border-radius: 4px;
+    }
+}
+
+/* End ScrollTop */
+/* **************************************************** */
