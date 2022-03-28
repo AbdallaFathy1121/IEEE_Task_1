@@ -51,7 +51,17 @@ $(window).on('load', function() {
     });
 
     /////////////////////////////////////////////
-
+    
+    // Init Owl Carousel
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        items:1,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 400
+    });
+    
     // Init AOS
     AOS.init();
 
