@@ -1,10 +1,19 @@
 $(window).on('load', function() {
-        
+
+    
     // Loading
     $(".box-loading").delay(0).fadeOut('slow', function () {
         $(this).remove().fadeOut();
     });
 
+    ///////////////////////////////////////////
+    
+    // Set Same Height
+    $(".main-section .name").height($(".main-section .details").height());
+    $(window).resize(function () {
+        $(".main-section .name").height($(".main-section .details").height());
+    });
+    
     ///////////////////////////////////////////
 
     // Navbar on Scroll Animation
