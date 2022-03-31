@@ -1,6 +1,5 @@
 $(window).on('load', function() {
 
-    
     // Loading
     $(".box-loading").delay(0).fadeOut('slow', function () {
         $(this).remove().fadeOut();
@@ -8,10 +7,14 @@ $(window).on('load', function() {
 
     ///////////////////////////////////////////
     
-    // Set Same Height
-    $(".main-section .name").height($(".main-section .details").height());
-    $(window).resize(function () {
+    // Set Same Height Of Two Section
+    if($(window).width() > 768 ) {
         $(".main-section .name").height($(".main-section .details").height());
+    }
+    $(window).resize(function () {
+        if($(window).width() > 768 ) {
+            $(".main-section .name").height($(".main-section .details").height());
+        }
     });
     
     ///////////////////////////////////////////
@@ -61,7 +64,7 @@ $(window).on('load', function() {
 
     /////////////////////////////////////////////
     
-    // Init Owl Carousel
+    // Init Owl Carousel (Slider)
     $('.owl-carousel').owlCarousel({
         loop:true,
         items:1,
@@ -71,7 +74,7 @@ $(window).on('load', function() {
         smartSpeed: 400
     });
     
-    // Init AOS
+    // Init AOS (Animation)
     AOS.init();
 
 });

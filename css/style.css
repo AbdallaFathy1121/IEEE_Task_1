@@ -186,21 +186,18 @@ li {
     font-size: 20px;
     color: var(--white);
     margin-top: 70px;
+    width: 100%;
 }
-
-@media (max-width: 567px) {
+@media (max-width: 576px) {
     .owl-carousel .item .info .title {
-        font-size: 30px;
-        color: var(--white);
+        font-size: 28px;
     }
     .owl-carousel .item .info .subtitle {
-        font-size: 30px;
-        color: var(--blue);
+        font-size: 28px;
     }
     .owl-carousel .item .info .date {
         font-size: 16px;
-        color: var(--white);
-        margin-top: 70px;
+        padding: 0 15px;
     }
 }
 
@@ -221,6 +218,18 @@ li {
     width: 66px;
     height: 65px;
     margin-top: -20px;
+}
+@media (max-width: 576px) {
+    .owl-carousel .item .info .date .center {
+        width: 80px;
+    }
+    .owl-carousel .item .info .date .center img:first-child {
+        width: 80;
+    }
+    .owl-carousel .item .info .date .center img:last-child {
+        width: 45px;
+        height: 44px;
+    }
 }
 
 .owl-dot {
@@ -271,6 +280,12 @@ li {
     color: var(--black);
     margin-bottom: 10px;
 }
+@media (max-width: 576px) {
+    .last-events .title {
+        font-size: 28px;
+    }
+}
+
 .last-events .title span {
     color: var(--blue);
 }
@@ -304,19 +319,15 @@ li {
     animation: animate 4s linear infinite;
 }
 @keyframes animate {
-
     0% {
         right: 0px;
     }
-
     50% {
         right: 100%;
     }
-
     100% {
         right: 0px;
     }
-
 }
 
 .last-events p {
@@ -328,7 +339,7 @@ li {
 }
 @media (max-width: 576px) {
     .last-events p {
-        font-size: 20;
+        font-size: 16;
     }
 }
 
@@ -336,6 +347,11 @@ li {
     height: 335px;
     position: relative;
     border-radius: 8px;
+}
+@media (max-width: 576px) {
+    .last-events .row .box .box-img {
+        height: 260px;
+    }
 }
 
 .last-events .row .box .info {
@@ -354,11 +370,24 @@ li {
     font-size: 25px;
     font-weight: bold;
 }
+@media (max-width: 576px) {
+    .last-events .row .box .info {
+        width: 90%;
+    }
+    .last-events .row .box .info .name {
+        font-size: 22px;
+    }
+}
 
 .last-events .row .box .info .date {
     font-size: 18px;
     opacity: 0.45;
     margin: 10px 0;
+}
+@media (max-width: 576px) {
+    .last-events .row .box .info .date {
+        font-size: 14px;
+    }
 }
 
 .last-events .row .box .info .date span:nth-child(2) {
@@ -373,6 +402,12 @@ li {
     font-size: 17px;
     opacity: 0.6;
     line-height: 2;
+}
+@media (max-width: 576px) {
+    .last-events .row .box .info p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
 }
 
 .last-events .row .box .info a {
@@ -432,6 +467,9 @@ li {
 }
 
 @media (max-width: 992px) {
+    .main-section .name img {
+        margin-bottom: 20px;
+    }
     .wrapper .section .title {
         font-size: 22px;
     }
@@ -439,19 +477,17 @@ li {
         font-size: 14px;
     }
     .main-section .name .sub-title {
-        font-family: robot;
         font-size: 20px;
-        font-weight: bold;
-        margin-top: 25px;
-        margin-bottom: 15px;
     }
 }
 
 .main-section .name .share-icons {
     position: absolute;
-    left: 39px;
+    left: 0;
     right: 39px;
-    bottom: 35px;
+    bottom: 0;
+    padding-left: 39px;
+    padding-bottom: 35px;
     z-index: 2;
     background-color: var(--white);
 }
@@ -602,6 +638,12 @@ li {
     transform: translateY(-5px);
     border: 1px solid var(--blue);
 }
+@media (max-width: 576px) {
+    .schedule .content {
+        padding: 25px 10px 25px 10px;
+        transition: all .4s;
+    }
+}
 
 .schedule .content ul {
     margin-bottom: 0;
@@ -609,6 +651,11 @@ li {
     font-size: 19px;
     font-weight: 500;
     color: #808080;
+}
+@media (max-width: 576px) {
+    .schedule .content ul {
+        font-size: 14px;
+    }
 }
 
 .schedule .content ul li strong {
@@ -747,8 +794,8 @@ li {
 }
 @media (max-width: 576px) {
     .footer p {
-        max-width: 90%;
-        font-size: 14px;
+        max-width: 95%;
+        font-size: 13px;
     }
 }
 
@@ -794,6 +841,11 @@ li {
 }
 .footer .icons a:hover {
     color: var(--white);
+}
+@media (max-width: 576px) {
+    .footer .icons a {
+        font-size: 30px;
+    }
 }
 
 /* End Footer */
